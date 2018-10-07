@@ -7,6 +7,8 @@
     "lodash": "^4.17.11",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.0.4",
     "request": "^2.88.0",
     "rss-parser": "^3.5.2",
@@ -15,7 +17,9 @@
   "proxy": "http://localhost:5000",
   "scripts": {
     "now-start": "yarn run build && node server.js",
-    "start": "react-scripts start",
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "client": "react-scripts start",
+    "server": "nodemon server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -28,5 +32,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
 }
