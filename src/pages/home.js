@@ -1,3 +1,13 @@
 import React from 'react'
+import { AppContext } from 'app'
 
-export default () => <div>Home Page</div>
+export default () => (
+  <AppContext.Consumer>
+    {state => (
+      <div>
+        {console.log('state: ', state)}
+        Home Page
+      </div>
+    )}
+  </AppContext.Consumer>
+)

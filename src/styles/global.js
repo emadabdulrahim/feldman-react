@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import Variables from './variables'
 
 const GlobalStyle = createGlobalStyle`
   *, *::before, *::after {
@@ -81,6 +82,10 @@ const GlobalStyle = createGlobalStyle`
   pre,
   figure {
     margin: 0;
+  }
+
+  :root {
+    ${Variables};
   }
 `
 
