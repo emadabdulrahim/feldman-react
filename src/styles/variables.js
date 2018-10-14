@@ -103,7 +103,8 @@ export default css`
   --text-light: ${colors.gray.g400};
   --text-lightest: ${colors.blue.lightest};
 
-  --text-accent: ${colors.red.base};
+  --color-main: ${colors.blue.base};
+  --color-accent: ${colors.red.base};
 
   --bgColor-main-lightest: ${colors.blue.lightest};
   --bgColor-main-light: ${colors.gray.g200};

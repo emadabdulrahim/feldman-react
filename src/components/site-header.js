@@ -1,9 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { Link } from 'react-router-dom'
+import BasicLink from './link'
 import Logo from 'components/logo'
 import media from 'styled-media-query'
 import { IconButton } from 'evergreen-ui'
+import Hamburger from './hamburger'
 
 const HeaderContainer = styled.nav`
   background-color: var(--bgColor-main-lightest);
@@ -38,7 +39,7 @@ const DotSeparator = styled.span`
   height: 4px;
   border-radius: 50%;
   background-color: rgba(0, 0, 0, 0.1);
-  margin: 0 var(--space-12);
+  margin: 4px var(--space-12) 0;
 `
 
 const StyledIcon = styled.span`
@@ -48,30 +49,22 @@ const StyledIcon = styled.span`
   display: inline-block;
 `
 
-const NavLink = styled(Link)`
-  text-transform: uppercase;
-  font-size: var(--font-small);
-  letter-spacing: 0.06em;
-`
-
 const SiteHeader = () => (
   <HeaderContainer>
     <Header>
       <Logo theme="dark" />
-      <Nav>
-        <NavLink to="/blog">Blog</NavLink>
+      {/* <Nav>
+        <BasicLink to="/blog">Blog</BasicLink>
         <DotSeparator />
-        <NavLink to="/podcast">Postcast</NavLink>
+        <BasicLink to="/podcast">Postcast</BasicLink>
         <DotSeparator />
-        <NavLink to="#books">Books</NavLink>
+        <BasicLink to="#books">Books</BasicLink>
         <DotSeparator />
-        <NavLink to="/about">About</NavLink>
+        <BasicLink to="/about">About</BasicLink>
         <DotSeparator />
-        <NavLink to="/workshop">Workshop</NavLink>
-      </Nav>
-      <StyledIcon>
-        <IconButton icon="menu" appearance="minimal" iconSize={20} />
-      </StyledIcon>
+        <BasicLink to="/workshop">Workshop</BasicLink>
+      </Nav> */}
+      <Hamburger />
     </Header>
   </HeaderContainer>
 )

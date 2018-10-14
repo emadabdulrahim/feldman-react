@@ -1,0 +1,20 @@
+@import 'styles/main.scss';
+
+.section {
+  display: block;
+  background-color: $color-bg-tinted-2;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.profile_wrapper {
+  display: flex;
+}
+
+.name {
+  font-family: 'garamond-premier-pro';
+  font-size: 21px;
+  color: black;
+}

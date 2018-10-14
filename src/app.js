@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { Route, BrowserRouter, Switch } from 'react-router-dom'
-import GlobalStyle from 'styles/global'
 import Home from 'pages/home'
 import schema from './schema'
 import About from 'pages/about'
@@ -41,14 +40,11 @@ class App extends Component {
     return (
       <BrowserRouter>
         <AppContext.Provider value={this.state}>
-          <main>
-            <GlobalStyle />
-            <SiteHeader />
-            <Switch>
-              <Route path="/about" component={About} />
-              <Route path="/" component={Home} />
-            </Switch>
-          </main>
+          <SiteHeader />
+          <Switch>
+            <Route path="/about" component={About} />
+            <Route path="/" component={Home} />
+          </Switch>
         </AppContext.Provider>
       </BrowserRouter>
     )
