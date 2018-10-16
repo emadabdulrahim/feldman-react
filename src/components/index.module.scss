@@ -1,0 +1,10 @@
+@import 'styles/main.scss';
+
+.separator {
+  margin: 0 $spacing-4;
+  margin-top: $spacing-1;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: rgba($blue-darkest, 0.12);
+}

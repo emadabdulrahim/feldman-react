@@ -1,20 +1,33 @@
 @import 'styles/main.scss';
 
 .section {
-  display: block;
-  background-color: $color-bg-tinted-2;
+  padding: $spacing-10 0;
 }
 
 .wrapper {
+  max-width: $max-width;
+  padding: 0 $gutter;
   margin: 0 auto;
 }
 
 .profile_wrapper {
   display: flex;
+  align-items: flex-start;
+}
+
+.avatar {
+  --avatar-size: 128px;
+
+  max-width: var(--avatar-size);
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.profile_content {
+  margin-left: $spacing-7;
 }
 
 .name {
   font-family: 'garamond-premier-pro';
-  font-size: 21px;
-  color: black;
+  font-size: $font-size-7;
 }

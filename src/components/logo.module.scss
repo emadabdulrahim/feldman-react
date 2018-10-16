@@ -1,0 +1,32 @@
+@import 'styles/main.scss';
+
+.container {
+  --size: 36px;
+
+  @extend %link;
+  @extend %flexXY;
+  width: var(--size);
+  height: var(--size);
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px $color-accent;
+}
+
+.text {
+  --logo-font-size: #{$font-size-4};
+
+  font-size: var(--logo-font-size);
+  letter-spacing: 0.06em;
+  font-weight: $font-semi;
+  color: $blue-darkest;
+}
+
+@media (max-width: 700px) {
+  .container {
+    --size: 28px;
+  }
+
+  .text {
+    --logo-font-size: #{$font-size-3};
+  }
+}

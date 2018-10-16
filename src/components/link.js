@@ -1,24 +1,21 @@
 import React from 'react'
-import { Button } from 'evergreen-ui'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import { link } from 'styles/shared'
+import classNames from 'classnames/bind'
+import s from './link.module.scss'
 
-const StyledLink = styled(Link)`
-  ${link};
-`
+const cx = classNames.bind(s)
 
-const StyledButton = styled(Button)`
-  color: var(--text-darkest) !important;
-  letter-spacing: 0.07em !important;
-  font-family: var(--sans) !important;
-  font-size: var(--font-small) !important;
-`
+const BasicLink = ({ type, children, ...rest }) => {
+  const className = cx({
+    base: true,
+    linkNav: type === 'nav',
+  })
 
-const BasicLink = ({ children, ...rest}) => (
-  <StyledLink {...rest}>
-    <StyledButton appearance="minimal">{children}</StyledButton>
-  </StyledLink>
-)
+  return (
+    <Link className={className} {...rest}>
+      {children}
+    </Link>
+  )
+}
 
 export default BasicLink

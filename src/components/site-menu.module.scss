@@ -1,0 +1,63 @@
+@import 'styles/main.scss';
+
+%line {
+  --line-width: 20px;
+
+  content: '';
+  position: absolute;
+  width: var(--line-width);
+  height: 2px;
+  border-radius: $radius;
+  left: calc(var(--line-width) / 2);
+  background: $gray-9;
+  transition: width, transform $trans-short $spring;
+}
+
+.menu_sheet {
+  position: fixed;
+  top: 0;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-lightest;
+  transform: translateY(-100%);
+  z-index: 10;
+}
+
+.icon {
+  @extend %link;
+  display: flex;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  pointer-events: all;
+  border-radius: var(--radius);
+  outline: none;
+  vertical-align: baseline;
+
+  &:hover {
+    background: rgba($blue-darkest, 0.06);
+  }
+
+  &:before {
+    @extend %line;
+    top: 16px;
+  }
+
+  &:after {
+    @extend %line;
+    bottom: 16px;
+  }
+}
+
+.icon__open {
+  z-index: 15;
+
+  &:before {
+    transform: translateY(3px) rotate(135deg);
+  }
+
+  &:after {
+    transform: translateY(-3px) rotate(45deg);
+  }
+}

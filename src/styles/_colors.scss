@@ -10,17 +10,19 @@ $red-base: #da2326;
 $red-dark: #9a0b0d;
 $red-darkest: #2c1112;
 
-$gray-1: #faf2f2;
-$gray-2: #e9ecf0;
-$gray-3: #d8dde3;
-$gray-4: #bcc4cc;
-$gray-5: #919aa4;
-$gray-6: #748088;
-$gray-7: #4c555a;
-$gray-8: #262a2f;
+$gray-1: #f5f8fa;
+$gray-2: #ebeeef;
+$gray-3: #dee1e3;
+$gray-4: #bec5cb;
+$gray-5: #929aa0;
+$gray-6: #676e74;
+$gray-7: #585f65;
+$gray-8: #374148;
+$gray-9: #202b33;
+$gray-10: #182026;
 
 $white: #fff;
-$black: #000;
+$black: #10161a;
 
 $color-main: $blue-base;
 $color-accent: $red-base;
@@ -33,9 +35,10 @@ $color-link: $blue-base;
 $color-text-main: $color-main;
 $color-text-accent: $color-accent;
 
-$color-bg-tinted-blue: $blue-lightest;
-$color-bg-tinted-1: $gray-1;
-$color-bg-tinted-2: $gray-2;
+$color-bg-lightest-blue: $blue-lightest;
+$color-bg-lightest: $gray-1;
+$color-bg-light: $gray-2;
+$color-bg-medium: $gray-3;
 
 $color-success: #50b83c;
 $color-error: $red-dark;

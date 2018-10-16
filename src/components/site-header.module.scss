@@ -1,0 +1,22 @@
+@import '../styles/main.scss';
+
+@custom-media --viewport-medium (width <= 900px);
+
+.global_nav {
+  background-color: $color-bg-light;
+
+  @media (--viewport-medium) {
+    background-color: black;
+  }
+}
+
+.nav_content {
+  @extend %flexBetweenY;
+  padding: $spacing-3 $gutter;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.nav_menu {
+  @extend %flexY;
+}

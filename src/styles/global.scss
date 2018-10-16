@@ -1,9 +1,15 @@
 @import './_colors';
 @import './_typography';
 
+a {
+  color: unset;
+  text-decoration: none;
+}
+
 body {
   color: $color-text-body;
   font-family: $font-primary;
-  font-size: $text-base;
+  font-size: $font-size-5;
+  line-height: $line-height-body;
   -webkit-font-smoothing: antialiased;
 }

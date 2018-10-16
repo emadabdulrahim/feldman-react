@@ -1,0 +1,18 @@
+@import 'styles/main.scss';
+
+.base {
+  @extend %link;
+  color: $color-main;
+  font-size: $font-size-5;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.linkNav {
+  padding: 0 $spacing-4;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+}

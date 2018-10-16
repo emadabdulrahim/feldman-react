@@ -1,0 +1,22 @@
+@import 'styles/main.scss';
+
+%display {
+  color: $color-text-heading;
+  line-height: $line-height-heading;
+  font-family: $font-display;
+  font-style: italic;
+}
+
+.hero {
+  --font-hero: #{$font-section-title};
+
+  font-size: var(--font-hero);
+  @extend %display;
+}
+
+.section_title {
+  --font-section-title: #{$font-section-title};
+
+  font-size: var(--font-section-title);
+  @extend %display;
+}
