@@ -9,7 +9,7 @@
   height: 2px;
   border-radius: $radius;
   left: calc(var(--line-width) / 2);
-  background: $gray-9;
+  background: $red-light;
   transition: width, transform $trans-short $spring;
 }
 
@@ -22,6 +22,7 @@
   background-color: $color-bg-lightest;
   transform: translateY(-100%);
   z-index: 10;
+  overflow: hidden;
 }
 
 .icon {
@@ -34,6 +35,7 @@
   border-radius: var(--radius);
   outline: none;
   vertical-align: baseline;
+  z-index: 15;
 
   &:hover {
     background: rgba($blue-darkest, 0.06);
@@ -51,8 +53,6 @@
 }
 
 .icon__open {
-  z-index: 15;
-
   &:before {
     transform: translateY(3px) rotate(135deg);
   }

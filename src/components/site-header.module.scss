@@ -1,22 +1,25 @@
-@import '../styles/main.scss';
-
-@custom-media --viewport-medium (width <= 900px);
+@import 'styles/main.scss';
 
 .global_nav {
-  background-color: $color-bg-light;
-
-  @media (--viewport-medium) {
-    background-color: black;
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-color: rgba($color-accent, 0.82);
+  box-shadow: 0 1px 2px rgba($color-accent, 0.07);
 }
 
 .nav_content {
   @extend %flexBetweenY;
-  padding: $spacing-3 $gutter;
+  padding: $spacing-4 $gutter;
   max-width: $max-width;
   margin: 0 auto;
 }
 
 .nav_menu {
-  @extend %flexY;
+  display: flex;
+  flex-direction: column;
+  margin-left: $spacing-12;
+  margin-top: $spacing-12;
 }

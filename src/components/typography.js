@@ -1,10 +1,13 @@
 import React from 'react'
+import cx from 'classnames'
 import s from './typography.module.scss'
 
-export const Hero = ({ children, ...rest }) => (
-  <h1 className={s.hero}>{children}</h1>
+export const Hero = ({ children, className, ...rest }) => (
+  <h1 className={cx(s.hero, className)} {...rest}>
+    {children}
+  </h1>
 )
 
-export const SectionTitle = ({ children, ...rest }) => (
-  <h2 className={s.section_title}>{children}</h2>
+export const SectionTitle = ({ children, className, ...rest }) => (
+  <h2 className={cx(s.section_title, className)}>{children}</h2>
 )

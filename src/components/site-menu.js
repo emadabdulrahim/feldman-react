@@ -1,17 +1,40 @@
 import React from 'react'
 import s from './site-menu.module.scss'
 import classNames from 'classnames/bind'
-import { TweenLite } from 'gsap'
+import { TweenLite, Circ } from 'gsap'
 
 const cx = classNames.bind(s)
 
 const MenuContext = React.createContext()
 
 class Sheet extends React.Component {
-  myTween = null
+  sheetTween = null
 
   componentDidMount() {
-    this.myTween = TweenLite.to(this.menuSheet, 0.5, { y: 0 })
+    if (this.props.isOpen) {
+      this.slideDown()
+    }
+  }
+
+  componentDidUpdate(prevProps) {
+    const { isOpen } = this.props
+
+    if (prevProps.isOpen === false && isOpen === true) {
+      this.slideDown()
+    } else if (prevProps.isOpen === true && isOpen === false) {
+      this.slideUp()
+    }
+  }
+
+  slideDown = () => {
+    this.sheetTween = TweenLite.to(this.menuSheet, 0.5, {
+      y: 0,
+      ease: Circ.easeInOut,
+    })
+  }
+
+  slideUp = () => {
+    this.sheetTween.reverse()
   }
 
   getMenuSheet = el => {
@@ -29,7 +52,7 @@ class Sheet extends React.Component {
 
 const _MenuSheet = props => (
   <MenuContext.Consumer>
-    {({ isOpen }) => isOpen && <Sheet isOpen={isOpen} {...props} />}
+    {({ isOpen }) => <Sheet isOpen={isOpen} {...props} />}
   </MenuContext.Consumer>
 )
 

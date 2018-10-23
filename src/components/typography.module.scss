@@ -9,14 +9,14 @@
 
 .hero {
   --font-hero: #{$font-section-title};
+  @extend %display;
 
   font-size: var(--font-hero);
-  @extend %display;
 }
 
 .section_title {
   --font-section-title: #{$font-section-title};
+  @extend %display;
 
   font-size: var(--font-section-title);
-  @extend %display;
 }

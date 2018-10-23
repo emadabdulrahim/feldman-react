@@ -1,21 +1,35 @@
 import React from 'react'
-import s from './hero.module.scss'
 import { SectionTitle, Hero } from 'components/typography'
 import avatar from 'static/profile.jpg'
-import cx from 'classnames'
+import s from './hero.module.scss'
 
 export default () => (
   <section className={s.section}>
+    <div className={s.mask}>
+      <div className={s.background_image} />
+    </div>
     <div className={s.wrapper}>
       <div className={s.profile_wrapper}>
         <figure className={s.avatar}>
           <img src={avatar} alt="headshot" />
         </figure>
         <div className={s.profile_content}>
-          <h4 className={s.name}>— David B. Feldman PhD</h4>
-          <Hero>Author,</Hero>
-          <Hero>Spaker,</Hero>
-          <Hero>Professor</Hero>
+          <h4 className={s.name}>David B. Feldman PhD</h4>
+          <Hero className={s.title}>
+            <div>Author,</div>
+            <div>Spaker,</div>
+            <div>Professor</div>
+          </Hero>
+          <p className={s.intro_blurb}>
+            David B. Feldman, PhD is a professor, author, speaker, and host of
+            the Psychology in 10 Minutes podcast. Chair of the Department of
+            Counseling Psychology at Santa Clara University, Dr. Feldman has
+            published three books, lectured for organizations around the world,
+            appeared on national television and radio, and writes regularly for
+            Psychology Today. His research on how people maintain hope and
+            meaning in the face or trauma, loss, and setbacks has been published
+            in top academic journals.
+          </p>
         </div>
       </div>
     </div>
