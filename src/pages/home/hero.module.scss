@@ -2,27 +2,12 @@
 
 .section {
   padding: $spacing-12 0;
-  background-color: #f9f3f6;
-  position: relative;
-
-  background-image: url('../../static/bg-12.jpg');
-  background-size: 66%;
-  background-position: 115% 50%;
-  background-repeat: no-repeat;
-
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    width: 100%;
-    height: 100%;
-    top: 0;
-  }
+  background-color: $color-bg-lightest;
 }
 
 .wrapper {
   position: relative;
-  max-width: $max-width;
+  max-width: 900px;
   padding: 0 $gutter;
   margin: 0 auto;
   z-index: 1;
@@ -51,14 +36,14 @@
   margin-bottom: 0.25em;
 }
 
-.title {
-  color: $color-text-accent;
-}
+// .title {
+//   color: $color-text-accent;
+// }
 
 .intro_blurb {
-  font-size: $font-size-7;
+  font-size: $font-size-8;
   font-family: $font-serif;
   max-width: 32em;
   margin-top: 2em;
-  margin-left: 3em;
+  letter-spacing: -0.01em;
 }

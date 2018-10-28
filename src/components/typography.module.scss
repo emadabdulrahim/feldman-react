@@ -1,9 +1,10 @@
 @import 'styles/main.scss';
 
 %display {
-  color: $color-text-heading;
   line-height: $line-height-heading;
   font-family: $font-display;
+  font-weight: $font-bold;
+  letter-spacing: -0.02em;
   font-style: italic;
 }
 
@@ -12,10 +13,18 @@
   @extend %display;
 
   font-size: var(--font-hero);
+  background: linear-gradient(
+    to bottom right,
+    lighten($color-accent, 10%),
+    darken($color-accent, 10%)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .section_title {
   --font-section-title: #{$font-section-title};
+  color: $color-text-heading;
   @extend %display;
 
   font-size: var(--font-section-title);

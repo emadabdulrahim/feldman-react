@@ -5,9 +5,6 @@ import s from './hero.module.scss'
 
 export default () => (
   <section className={s.section}>
-    <div className={s.mask}>
-      <div className={s.background_image} />
-    </div>
     <div className={s.wrapper}>
       <div className={s.profile_wrapper}>
         <figure className={s.avatar}>
@@ -16,9 +13,7 @@ export default () => (
         <div className={s.profile_content}>
           <h4 className={s.name}>David B. Feldman PhD</h4>
           <Hero className={s.title}>
-            <div>Author,</div>
-            <div>Spaker,</div>
-            <div>Professor</div>
+            Author, <br /> Speaker, <br /> Professor
           </Hero>
           <p className={s.intro_blurb}>
             David B. Feldman, PhD is a professor, author, speaker, and host of
