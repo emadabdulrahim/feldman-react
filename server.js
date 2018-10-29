@@ -1,11 +1,11 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const Parser = require('rss-parser')
-const request = require('request')
 var Mailchimp = require('mailchimp-api-v3')
 
-const LIST_ID = '1152e7d2e3'
-const API_KEY = '63266e83401a8d965c33e0429301c93c-us12'
+const LIST_ID = process.env.REACT_APP_LIST_ID
+const API_KEY = process.env.REACT_APP_API_KEY
 
 var mailchimp = new Mailchimp(API_KEY)
 

@@ -16,10 +16,10 @@ const Post = ({ title, content, date, categories, link }) => (
       </a>
       <div className={s.post}>
         <div className={s.post_content}>
-          <date className={s.post_date}>
+          <time className={s.post_date}>
             <span>{date[0]}</span>
             <span className={s.muted}>{date[1]}</span>
-          </date>
+          </time>
           <h4 className={s.post_title}>{title}</h4>
           <p className={s.post_blurb}>{content}</p>
           <a
