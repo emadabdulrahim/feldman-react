@@ -7,9 +7,15 @@ a {
 }
 
 body {
-  color: $color-text-body;
+  color: $color-text-heading;
   font-family: $font-primary;
   font-size: $font-size-5;
   line-height: $line-height-body;
   -webkit-font-smoothing: antialiased;
+
+  // This needs to come after -webkit-font-smoothing
+  -moz-osx-font-smoothing: grayscale;
+
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }

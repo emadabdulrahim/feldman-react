@@ -1,15 +1,14 @@
 @import 'styles/main.scss';
 
 .container {
-  --size: 36px;
+  --size: 44px;
 
   @extend %link;
   @extend %flexXY;
   width: var(--size);
   height: var(--size);
-  background: transparent;
+  background: #434a60;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px rgba($red-lightest, 0.35);
 }
 
 .text {
@@ -17,8 +16,8 @@
 
   font-size: var(--logo-font-size);
   letter-spacing: 0.06em;
-  font-weight: $font-semi;
-  color: $red-light;
+  font-weight: $font-normal;
+  color: #cdd1e1;
   margin-top: 1px;
 }
 

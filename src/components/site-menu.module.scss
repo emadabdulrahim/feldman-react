@@ -1,15 +1,15 @@
 @import 'styles/main.scss';
 
 %line {
-  --line-width: 20px;
+  --line-width: 24px;
 
   content: '';
   position: absolute;
   width: var(--line-width);
-  height: 2px;
+  height: 1px;
   border-radius: $radius;
   left: calc(var(--line-width) / 2);
-  background: $red-light;
+  background: #cdd1e1;
   transition: width, transform $trans-short $spring;
 }
 
@@ -29,8 +29,8 @@
   @extend %link;
   display: flex;
   position: relative;
-  width: 40px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   pointer-events: all;
   border-radius: var(--radius);
   outline: none;
@@ -38,17 +38,17 @@
   z-index: 15;
 
   &:hover {
-    background: rgba($blue-darkest, 0.06);
+    background: rgba($blue-light, 0.06);
   }
 
   &:before {
     @extend %line;
-    top: 16px;
+    top: 20px;
   }
 
   &:after {
     @extend %line;
-    bottom: 16px;
+    bottom: 20px;
   }
 }
 

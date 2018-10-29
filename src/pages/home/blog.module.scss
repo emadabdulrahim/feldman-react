@@ -1,0 +1,163 @@
+@import 'styles/main.scss';
+
+.section {
+  position: relative;
+  display: flex;
+  max-height: 1100px;
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 80px;
+    width: 58.5%;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to bottom, rgba(white, 0.1), white);
+  }
+}
+
+.blog_background {
+  position: relative;
+  background: url('static/coffe-3.jpg');
+  background-size: cover;
+  background-position: 55% 50%;
+  background-repeat: no-repeat;
+  flex: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(31, 27, 27, 0.2);
+  }
+}
+
+.section_content {
+  flex: 1.4;
+  overflow-y: auto;
+  padding-bottom: $spacing-10;
+}
+
+.section_content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.section_content::-webkit-scrollbar-thumb {
+  background: rgba($color-text-heading, 0.35);
+}
+
+.section_content::-webkit-scrollbar-track {
+  background: rgba($color-text-heading, 0.15);
+}
+
+.section_intro {
+  padding-top: $spacing-10;
+  margin-left: $spacing-10;
+  padding-bottom: $spacing-9;
+  margin-bottom: $spacing-6;
+  border-bottom: 1px solid $color-bg-light;
+}
+
+.share {
+  display: flex;
+  align-items: center;
+}
+
+.social_icon {
+  svg {
+    width: 29px;
+    height: 29px;
+
+    fill: $color-text-body;
+  }
+
+  & + & {
+    margin-left: $spacing-4;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.muted {
+  color: lighten($color-text-medium, 20%);
+}
+
+.section_blurb {
+  font-size: $font-size-6;
+  max-width: 28em;
+  margin-bottom: 2em;
+}
+
+.feed_wrapper {
+}
+
+.feed {
+  max-width: 660px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post_container {
+  position: relative;
+
+  &:hover {
+    background: $color-bg-lightest;
+  }
+}
+
+.post_wrapper {
+  padding: $spacing-7 0;
+  padding-right: $spacing-7;
+  margin-left: $spacing-10;
+}
+
+.post {
+  display: flex;
+  align-items: flex-start;
+}
+
+.post_date {
+  font-size: $font-size-5;
+  font-variant: small-caps;
+  color: $color-text-medium;
+  letter-spacing: 0.04em;
+  font-weight: 500;
+}
+
+.post_title {
+  font-size: $font-size-8;
+  font-weight: $font-bold;
+  margin-bottom: 0.25em;
+}
+
+.post_blurb {
+  font-size: $font-size-6;
+  color: $color-text-body;
+  font-weight: 500;
+  margin-bottom: 1em;
+}
+
+.post_link {
+  font-variant: small-caps;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  color: $red-base;
+}
+
+.link_absolute {
+  position: absolute;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+}

@@ -21,7 +21,7 @@ const formatDate = date => {
   const day = dateObj.getDate()
   const year = dateObj.getFullYear()
 
-  return [`${day}`, `${MONTHS[monthIndex]}`, `${year}`]
+  return [`${MONTHS[monthIndex]} ${day},`, ` ${year}`]
 }
 
 const getCategory = categories => map(categories, each => each._)

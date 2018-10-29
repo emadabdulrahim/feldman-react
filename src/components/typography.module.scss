@@ -3,29 +3,35 @@
 %display {
   line-height: $line-height-heading;
   font-family: $font-display;
-  font-weight: $font-bold;
-  letter-spacing: -0.02em;
-  font-style: italic;
+  letter-spacing: -0.01em;
 }
 
 .hero {
-  --font-hero: #{$font-section-title};
   @extend %display;
+  --font-hero: #{$font-hero};
+  font-style: italic;
+  font-weight: $font-black;
 
   font-size: var(--font-hero);
-  background: linear-gradient(
-    to bottom right,
-    lighten($color-accent, 10%),
-    darken($color-accent, 10%)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .section_title {
+  @extend %display;
   --font-section-title: #{$font-section-title};
   color: $color-text-heading;
-  @extend %display;
 
   font-size: var(--font-section-title);
+  margin-bottom: 0.25em;
+}
+
+.section_super_title {
+  font-weight: 500;
+  color: $red-base;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  --font-size: #{$font-size-4};
+
+  font-size: var(--font-size);
+  margin-bottom: 0.75em;
 }

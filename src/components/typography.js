@@ -11,3 +11,7 @@ export const Hero = ({ children, className, ...rest }) => (
 export const SectionTitle = ({ children, className, ...rest }) => (
   <h2 className={cx(s.section_title, className)}>{children}</h2>
 )
+
+export const SectionSuperTitle = ({ children, className, ...rest }) => (
+  <h3 className={cx(s.section_super_title, className)}>{children}</h3>
+)
