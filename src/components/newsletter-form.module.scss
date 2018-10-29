@@ -1,0 +1,21 @@
+@import 'styles/main.scss';
+
+.form {
+  max-width: 500px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.input_group {
+  margin-right: $spacing-4;
+  flex: 0.6;
+}
+
+.toaster.toaster {
+  display: flex;
+  align-items: center;
+}
+
+.label.label {
+  margin-bottom: $spacing-2;
+}

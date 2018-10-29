@@ -2,7 +2,7 @@ import React from 'react'
 import { AppContext } from 'app'
 import Hero from './hero'
 import Blog from './blog'
-import Newsletter from './newsletter-form'
+import Newsletter from './newsletter'
 
 const googleSheet = window.Tabletop
 

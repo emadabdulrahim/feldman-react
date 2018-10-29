@@ -18,7 +18,7 @@ const parser = new Parser()
 app.use(express.static(path.join(__dirname, '/build')))
 app.use(express.json())
 
-app.get('/api/blog', (req, res) => {
+app.get('/api/blog', (_, res) => {
   ;(async () => {
     const feed = await parser.parseURL(
       'https://www.psychologytoday.com/blog/supersurvivors/feed'
@@ -41,6 +41,10 @@ app.post('/api/subscribe', async (req, res) => {
       status: 'subscribed',
     })
     .then(results => res.json(results))
+    .catch(err => {
+      console.log('error: ', err)
+      res.json(err)
+    })
 })
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

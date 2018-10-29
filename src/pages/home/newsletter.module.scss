@@ -1,0 +1,20 @@
+@import 'styles/main.scss';
+
+.section {
+  background-color: $gray-9;
+}
+
+.section_wrapper {
+  padding: $spacing-10 0;
+}
+
+.section_title {
+  color: $color-text-light;
+}
+
+.section_blurp {
+  font-size: $font-size-6;
+  max-width: 28em;
+  margin-bottom: 2em;
+  color: $color-text-light;
+}
