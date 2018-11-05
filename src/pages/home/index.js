@@ -1,8 +1,8 @@
 import React from 'react'
-import { AppContext } from 'app'
 import Hero from './hero'
 import Blog from './blog'
 import Newsletter from './newsletter'
+import Books from './books'
 
 const googleSheet = window.Tabletop
 
@@ -19,14 +19,11 @@ export default () => {
   }
 
   return (
-    <AppContext.Consumer>
-      {state => (
-        <div>
-          <Hero />
-          <Blog {...state} />
-          <Newsletter />
-        </div>
-      )}
-    </AppContext.Consumer>
+    <div>
+      <Hero />
+      <Blog />
+      <Newsletter />
+      <Books />
+    </div>
   )
 }

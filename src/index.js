@@ -1,14 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './app'
-import '@blueprintjs/icons/lib/css/blueprint-icons.css'
-import '@blueprintjs/core/lib/css/blueprint.css'
-import 'styles/main.scss'
-import * as serviceWorker from './serviceWorker'
+import 'styles/_main.scss'
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister()

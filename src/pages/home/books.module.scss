@@ -1,0 +1,53 @@
+@import 'styles/_main.scss';
+
+.section {
+  padding: $spacing-10 0;
+}
+
+.heading_container {
+  text-align: center;
+  max-width: 550px;
+  margin: 0 auto $spacing-7;
+}
+
+.decorated_heading {
+  position: relative;
+  background: white;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    transform: translateY(-50%);
+    background: $red-dark;
+  }
+}
+
+.heading {
+  position: relative;
+  background: $white;
+  padding: 0 $spacing-4;
+  z-index: 1;
+}
+
+.section_blurb {
+  font-size: $font-size-6;
+}
+
+.books_list {
+  display: grid;
+  grid-row-gap: $spacing-6;
+  grid-auto-rows: 1fr;
+}
+
+.book_cover {
+  max-width: 225px;
+  width: 100%;
+
+  svg {
+    width: 100%;
+  }
+}

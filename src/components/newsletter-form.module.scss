@@ -1,14 +1,39 @@
-@import 'styles/main.scss';
+@import 'styles/_main.scss';
 
-.form {
+.form.form {
   max-width: 500px;
   display: flex;
   align-items: flex-end;
+
+  * {
+    font-family: $font-sans;
+  }
+
+  label {
+    font-size: 16px;
+    margin-bottom: 0.5em;
+    color: $gray-5;
+  }
+
+  input {
+    background-color: $gray-6;
+    border: 1px solid $gray-6;
+  }
+
+  button {
+    background: $blue-base;
+    color: white;
+    font-size: 16px;
+  }
 }
 
 .input_group {
   margin-right: $spacing-4;
   flex: 0.7;
+}
+
+.input {
+  margin-bottom: 0;
 }
 
 .toaster.toaster {

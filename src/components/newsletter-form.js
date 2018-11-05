@@ -1,29 +1,21 @@
 import React from 'react'
-import {
-  Label,
-  InputGroup,
-  Button,
-  Position,
-  Toaster,
-  Intent,
-} from '@blueprintjs/core'
 import s from './newsletter-form.module.scss'
+import { TextInputField, Button, toaster } from 'evergreen-ui'
 import cx from 'classnames'
-import { INTENT_SUCCESS } from '@blueprintjs/core/lib/esm/common/classes'
 
-const toasterType = res => {
-  if (res.statusCode === 200) {
-    return {
-      message: 'Success! check your mail.',
-      intent: Intent.SUCCESS,
-    }
-  } else {
-    return {
-      message: res.error || res.title,
-      intent: Intent.WARNING,
-    }
-  }
-}
+// const toasterType = res => {
+//   if (res.statusCode === 200) {
+//     return {
+//       message: 'Success! check your mail.',
+//       intent: Intent.SUCCESS,
+//     }
+//   } else {
+//     return {
+//       message: res.error || res.title,
+//       intent: Intent.WARNING,
+//     }
+//   }
+// }
 
 class NewsletterForm extends React.Component {
   state = { email: '' }
@@ -36,13 +28,13 @@ class NewsletterForm extends React.Component {
     fetch(path, { method: 'POST', headers: { ...headers }, ...options })
       .then(res => res.json())
       .then(result => {
-        Toaster.create({
-          position: Position.TOP,
-        }).show({
-          ...toasterType(result),
-          className: s.toaster,
-          timeout: 3000,
-        })
+        let message = ''
+        if (result.statusCode === 200) {
+          message = 'Success! check your mail.'
+        } else {
+          message = result.error || result.title
+        }
+        toaster.notify(message)
         console.log('result: ', result)
       })
       .catch(console.log)
@@ -70,14 +62,13 @@ class NewsletterForm extends React.Component {
     return (
       <form className={cx('bp3-dark', s.form)} onSubmit={this.subscribe}>
         <div className={s.input_group}>
-          <Label htmlFor="email" className={s.label}>
-            Email
-          </Label>
-          <InputGroup
+          <TextInputField
+            className={s.input}
             id="email"
+            label="Email"
             onChange={this.handleChange}
-            leftIcon="envelope"
-            large
+            value={this.state.email}
+            marginBottom={0}
           />
         </div>
         <Button type="submit" large>

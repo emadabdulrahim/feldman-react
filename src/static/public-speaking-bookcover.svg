@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="464px" height="523px" viewBox="0 0 464 523" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>public-speaking-bookcover</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="232" cy="246" r="232"></circle>
+        <filter x="-0.4%" y="-0.4%" width="100.9%" height="100.9%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"></feGaussianBlur>
+            <feOffset dx="0" dy="1" in="shadowBlurInner1" result="shadowOffsetInner1"></feOffset>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.196078431   0 0 0 0 0.215686275   0 0 0 0 0.235294118  0 0 0 0.06 0" type="matrix" in="shadowInnerInner1"></feColorMatrix>
+        </filter>
+        <rect id="path-3" x="91" y="51" width="323" height="424" rx="3"></rect>
+        <filter x="-15.5%" y="-11.1%" width="134.1%" height="125.9%" filterUnits="objectBoundingBox" id="filter-4">
+            <feOffset dx="5" dy="8" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="17" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.768627451   0 0 0 0 0.278431373   0 0 0 0 0.278431373  0 0 0 0.434952446 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <radialGradient cx="50.7760225%" cy="51.0536537%" fx="50.7760225%" fy="51.0536537%" r="72.4759014%" gradientTransform="translate(0.507760,0.510537),scale(1.000000,0.760649),rotate(60.741457),translate(-0.507760,-0.510537)" id="radialGradient-5">
+            <stop stop-color="#D45353" offset="0%"></stop>
+            <stop stop-color="#BB3A3A" offset="100%"></stop>
+        </radialGradient>
+        <rect id="path-6" x="45" y="0" width="375" height="493" rx="3"></rect>
+        <filter x="-3.2%" y="-2.2%" width="106.9%" height="105.3%" filterUnits="objectBoundingBox" id="filter-7">
+            <feOffset dx="1" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="4" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.11809222   0 0 0 0 0.140728797   0 0 0 0 0.15404443  0 0 0 0.132529438 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD" transform="translate(-960.000000, -2460.000000)">
+            <g id="public-speaking-bookcover" transform="translate(960.000000, 2466.000000)">
+                <g id="Oval" fill-rule="nonzero">
+                    <use fill="#F3EFF1" xlink:href="#path-1"></use>
+                    <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                </g>
+                <g id="shadow" fill-rule="nonzero" fill="black" fill-opacity="1">
+                    <use filter="url(#filter-4)" xlink:href="#path-3"></use>
+                </g>
+                <g id="cover" fill-rule="nonzero">
+                    <use fill="black" fill-opacity="1" filter="url(#filter-7)" xlink:href="#path-6"></use>
+                    <use fill="url(#radialGradient-5)" xlink:href="#path-6"></use>
+                </g>
+                <path d="M77,33 L77,32 L377,32 L377,33 L78,33 L78,407 L77,407 L77,33 Z" id="Combined-Shape" fill="#EBC2C2" fill-rule="nonzero"></path>
+                <path d="M388,460 L388,461 L88,461 L88,460 L387,460 L387,86 L388,86 L388,460 Z" id="Combined-Shape" fill="#EBC2C2" fill-rule="nonzero"></path>
+                <text id="Public-Speaking-for" font-family="AGaramondPro-Regular, Adobe Garamond Pro" font-size="44" font-weight="normal" line-spacing="54" letter-spacing="0.104761906" fill="#FFFFFF">
+                    <tspan x="96.0402857" y="201">Public Speaking</tspan>
+                    <tspan x="207.966857" y="255">for</tspan>
+                    <tspan x="120.675048" y="309">Psychologists</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

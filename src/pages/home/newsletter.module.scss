@@ -1,6 +1,8 @@
-@import 'styles/main.scss';
+@import 'styles/_main.scss';
 
 .section {
+  display: block;
+  margin: 0;
   background-color: $gray-9;
 }
 

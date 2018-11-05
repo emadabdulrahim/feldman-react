@@ -1,4 +1,4 @@
-@import 'styles/main.scss';
+@import 'styles/_main.scss';
 
 .section {
   position: relative;
@@ -11,7 +11,7 @@
     position: absolute;
     display: block;
     height: 80px;
-    width: 58.5%;
+    width: 60.5%;
     bottom: 0;
     right: 0;
     background: linear-gradient(to bottom, rgba(white, 0.1), white);
@@ -39,7 +39,7 @@
 }
 
 .section_content {
-  flex: 1.4;
+  flex: 1.75;
   overflow-y: auto;
   padding-bottom: $spacing-10;
 }
