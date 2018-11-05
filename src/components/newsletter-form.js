@@ -77,9 +77,12 @@ class NewsletterForm extends React.Component {
             id="email"
             onChange={this.handleChange}
             leftIcon="envelope"
+            large
           />
         </div>
-        <Button type="submit">Subscribe</Button>
+        <Button type="submit" large>
+          Subscribe
+        </Button>
       </form>
     )
   }

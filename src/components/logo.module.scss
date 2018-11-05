@@ -1,5 +1,11 @@
 @import 'styles/main.scss';
 
+.link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .container {
   --size: 44px;
 

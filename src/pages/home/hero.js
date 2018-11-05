@@ -1,12 +1,12 @@
 import React from 'react'
 import { SectionTitle, Hero } from 'components/typography'
-import { SectionWrapper } from 'components'
+import { Container } from 'components'
 import avatar from 'static/profile.jpg'
 import s from './hero.module.scss'
 
 export default () => (
   <section className={s.section}>
-    <SectionWrapper>
+    <Container>
       <div className={s.profile_wrapper}>
         <figure className={s.avatar}>
           <img src={avatar} alt="headshot" />
@@ -28,6 +28,6 @@ export default () => (
           </p>
         </div>
       </div>
-    </SectionWrapper>
+    </Container>
   </section>
 )

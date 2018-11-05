@@ -5,6 +5,9 @@
 }
 
 .section_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: $spacing-8;
   padding: $spacing-10 0;
 }
 
@@ -15,6 +18,9 @@
 .section_blurp {
   font-size: $font-size-6;
   max-width: 28em;
-  margin-bottom: 2em;
   color: $color-text-light;
+}
+
+.form {
+  align-self: center;
 }
